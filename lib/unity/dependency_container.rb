@@ -25,6 +25,10 @@ module Unity
       Thread.current[:di_instances][name] = di_container_repository[name].call
     end
 
+    def with_dependency(name, &block)
+      yield(di(name))
+    end
+
     def dependency(name, &block)
       di_container_repository[name] = block
     end

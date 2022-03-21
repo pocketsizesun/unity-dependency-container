@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    unity-dependency-container (1.0.0)
+    unity-dependency-container (1.1.1)
 
 GEM
   remote: https://rubygems.org/
@@ -9,6 +9,7 @@ GEM
     rake (13.0.6)
 
 PLATFORMS
+  arm64-darwin-21
   x86_64-darwin-20
 
 DEPENDENCIES
@@ -16,4 +17,4 @@ DEPENDENCIES
   unity-dependency-container!
 
 BUNDLED WITH
-   2.2.30
+   2.3.3
