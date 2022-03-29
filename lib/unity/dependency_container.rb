@@ -15,7 +15,8 @@ module Unity
     end
 
     def di(name)
-      return di_instances[name] if !di_instances.nil? && di_instances.key?(name)
+      instances = Thread.current[:di_instances]
+      return instances[name] if !instances.nil? && instances.key?(name)
 
       Thread.current[:di_instances] ||= {}
 
