@@ -14,6 +14,10 @@ module Unity
       Thread.current[:di_instances]
     end
 
+    # @sg-ignore
+    # @!macro [attach] di
+    #   @param name [Object]
+    #   @return [$1]
     def di(name)
       instances = Thread.current[:di_instances]
       return instances[name] if !instances.nil? && instances.key?(name)
